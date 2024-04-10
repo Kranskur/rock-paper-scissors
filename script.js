@@ -52,23 +52,18 @@ function playRound(playerSelection, computerSelection){
     }
 
 }
-//Make a function that plays a five round game, keeps score
-// and reports a winner or loser at the end
-function playGame(){
-    for(round; round <= 5; round++){
-        console.log(playRound(prompt("Choose rock, paper or scissors"),getComputerChoice()))
-        console.log("Number of rounds: ", round, "\n", playerWin,"-",computerWin)
-    }
-    if (playerWin > computerWin){
-        console.log("You won the game!")
+const div = document.querySelector("div");
+let para = document.createElement("p");
+para.textContent = computerWin + '-' + playerWin ;
+div.appendChild(para)
 
-    }
-    else if (playerWin < computerWin){
-    console.log("You lost the game :(")
-}
-    else {
-    console.log("It's a tie")    
-    }
-}
 
-console.log(playGame())
+
+
+
+
+
+
+
+
+
