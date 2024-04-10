@@ -54,10 +54,16 @@ function playRound(playerSelection, computerSelection){
 }
 const div = document.querySelector("div");
 let para = document.createElement("p");
-para.textContent = computerWin + '-' + playerWin ;
+para.textContent = playerWin + '-' + computerWin ;
 div.appendChild(para)
 
 
+const buttons = document.querySelectorAll("button")
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    
+  });
+});
 
 
 
