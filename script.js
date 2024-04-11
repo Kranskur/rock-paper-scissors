@@ -58,11 +58,30 @@ function playRound(playerSelection, computerSelection){
 const buttons = document.querySelectorAll("button")
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-
+    playRound(button.className,getComputerChoice())
     const div = document.querySelector("div");
     let para = document.createElement("p");
     para.textContent = playerWin + '-' + computerWin ;
     div.appendChild(para)
+
+    if (playerWin == 5){
+        let winner = document.createElement("p");
+        winner.textContent = "You win!";
+        div.appendChild(winner)
+
+        }
+    else if(computerWin == 5){
+        let loser = document.createElement("p");
+        loser.textContent = "You lost! Better luck next time"
+        div.appendChild(loser)
+        }
+    else if(playerWin == 5 & computerWin == 5 ){
+        let tie = document.createElement("p");
+        tie.textContent = "It's a tie!";
+        div.appendChild(tie);
+        }
+        
+    
     
   });
 });
